@@ -4,6 +4,6 @@ Currently the cog is non functional as I first would like to get the base find-t
 
 Requirements:
 
-Python 3.5 or greater
+[Python 3.5 or greater](https://www.python.org/)
 
 [tweepy](http://www.tweepy.org/)
