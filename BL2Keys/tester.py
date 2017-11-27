@@ -100,7 +100,7 @@ def printer(data, working):
 	for c in range(len(data)):
 		if not showAll and not working[c]:
 			continue
-		elif int(tweets[c][0]) > latest and newOnly:
+		elif int(tweets[c][0]) < latest and newOnly:
 			continue
 		else:
 			keyCount += 1
