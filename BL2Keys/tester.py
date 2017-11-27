@@ -100,7 +100,7 @@ def printer(data, working):
 	for c in range(len(data)):
 		if not showAll and not working[c]:
 			continue
-		elif int(tweets[c][0]) < latest and newOnly:
+		elif int(tweets[c][0]) <= latest and newOnly:
 			continue
 		else:
 			keyCount += 1
@@ -205,7 +205,9 @@ log('Loading...\t\t\t')
 getTweets()
 
 latest = _fileExists()[1]
-last = int(tweets[len(tweets)-1][0])
+last = int(tweets[0][0])
+debug(tweets[0][0] + "\n")
+debug("last:   " + str(last) + "\nlatest: " + str(latest)+ "\n")
 if (last > latest):
 	_writeFile(last)
 
